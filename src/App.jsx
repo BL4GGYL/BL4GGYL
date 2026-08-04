@@ -6,6 +6,8 @@ function App() {
     localStorage.getItem("theme") !== "light"
   );
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
@@ -60,59 +62,97 @@ function App() {
         className={
           darkMode
             ?
-            "fixed w-full z-10 bg-gray-950/90 backdrop-blur p-4 flex flex-col md:flex-row gap-4 md:justify-between px-5 md:px-10"
+            "fixed top-0 w-full z-50 bg-gray-950/90 backdrop-blur p-4 shadow"
             :
-            "fixed w-full z-10 bg-white/90 backdrop-blur p-4 flex flex-col md:flex-row gap-4 md:justify-between px-5 md:px-10 shadow"
+            "fixed top-0 w-full z-50 bg-white/90 backdrop-blur p-4 shadow"
         }
       >
 
+        <div className="flex justify-between items-center">
 
-        <h1 className="text-xl font-bold">
-          Kaung Khant Lin
-        </h1>
-
-
-
-        <div className="flex flex-wrap items-center gap-4">
-
-          <a href="#about">
-            About
-          </a>
-
-          <a href="#skills">
-            Skills
-          </a>
-
-          <a href="#projects">
-            Projects
-          </a>
-
-          <a href="#contact">
-            Contact
-          </a>
+          <h1 className="text-xl font-bold">
+            Kaung Khant Lin
+          </h1>
 
 
           <button
-            onClick={toggleTheme}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+            className="md:hidden text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-
-            {
-              darkMode
-                ?
-                "☀️ Light"
-                :
-                "🌙 Dark"
-            }
-
+            ☰
           </button>
+
+
+
+          <div className="hidden md:flex items-center gap-5">
+
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+
+            <button
+              onClick={toggleTheme}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+            >
+              {
+                darkMode
+                  ?
+                  "☀️"
+                  :
+                  "🌙"
+              }
+            </button>
+
+          </div>
 
 
         </div>
 
 
-      </nav>
+        {
+          menuOpen &&
 
+          <div className="md:hidden flex flex-col gap-4 mt-4">
+
+            <a href="#about">
+              About
+            </a>
+
+            <a href="#skills">
+              Skills
+            </a>
+
+            <a href="#projects">
+              Projects
+            </a>
+
+            <a href="#contact">
+              Contact
+            </a>
+
+
+            <button
+              onClick={toggleTheme}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+            >
+              {
+                darkMode
+                  ?
+                  "☀️ Light"
+                  :
+                  "🌙 Dark"
+              }
+            </button>
+
+
+          </div>
+
+        }
+
+
+      </nav>
 
 
 
@@ -133,7 +173,7 @@ function App() {
 
 
 
-        <h1 className="text-5xl font-bold mb-5">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
           Kaung Khant Lin
         </h1>
 
