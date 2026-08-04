@@ -44,615 +44,688 @@ function App() {
 
   return (
 
-<div
-className={
-darkMode
-? "bg-gray-950 text-white min-h-screen"
-: "bg-gray-100 text-gray-900 min-h-screen"
-}
->
+    <div
+      className={
+        darkMode
+          ? "bg-gray-950 text-white min-h-screen"
+          : "bg-gray-100 text-gray-900 min-h-screen"
+      }
+    >
 
 
 
-{/* Navbar */}
+      {/* Navbar */}
 
-<nav
-className={
-darkMode
-?
-"fixed w-full z-10 bg-gray-950/90 backdrop-blur p-5 flex justify-between px-10"
-:
-"fixed w-full z-10 bg-white/90 backdrop-blur p-5 flex justify-between px-10 shadow"
-}
->
+      <nav
+        className={
+          darkMode
+            ?
+            "fixed w-full z-10 bg-gray-950/90 backdrop-blur p-4 flex flex-col md:flex-row gap-4 md:justify-between px-5 md:px-10"
+            :
+            "fixed w-full z-10 bg-white/90 backdrop-blur p-4 flex flex-col md:flex-row gap-4 md:justify-between px-5 md:px-10 shadow"
+        }
+      >
 
 
-<h1 className="text-xl font-bold">
-Kaung Khant Lin
-</h1>
+        <h1 className="text-xl font-bold">
+          Kaung Khant Lin
+        </h1>
 
 
 
-<div className="space-x-5">
+        <div className="flex flex-wrap items-center gap-4">
 
-<a href="#about">
-About
-</a>
+          <a href="#about">
+            About
+          </a>
 
-<a href="#skills">
-Skills
-</a>
+          <a href="#skills">
+            Skills
+          </a>
 
-<a href="#projects">
-Projects
-</a>
+          <a href="#projects">
+            Projects
+          </a>
 
-<a href="#contact">
-Contact
-</a>
+          <a href="#contact">
+            Contact
+          </a>
 
 
-<button
-onClick={toggleTheme}
-className="bg-blue-600 text-white px-4 py-2 rounded-lg"
->
+          <button
+            onClick={toggleTheme}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+          >
 
-{
-darkMode
-?
-"☀️ Light"
-:
-"🌙 Dark"
-}
+            {
+              darkMode
+                ?
+                "☀️ Light"
+                :
+                "🌙 Dark"
+            }
 
-</button>
+          </button>
 
 
-</div>
+        </div>
 
 
-</nav>
+      </nav>
 
 
 
 
 
-{/* Hero */}
+      {/* Hero */}
 
 
-<section
-className="h-screen flex flex-col justify-center items-center text-center px-5"
->
+      <section
+        className="h-screen flex flex-col justify-center items-center text-center px-5"
+      >
 
 
-<img
-src="/profile.jpg"
-alt="Kaung Khant Lin"
-className="w-40 h-40 rounded-full object-cover mb-6 border-4 border-blue-500"
-/>
+        <img
+          src="/profile.jpg"
+          alt="Kaung Khant Lin"
+          className="w-40 h-40 rounded-full object-cover mb-6 border-4 border-blue-500"
+        />
 
 
 
-<h1 className="text-5xl font-bold mb-5">
-Kaung Khant Lin
-</h1>
+        <h1 className="text-5xl font-bold mb-5">
+          Kaung Khant Lin
+        </h1>
 
 
 
-<h2 className="text-2xl text-blue-500 mb-5">
-Computer Science Student
-</h2>
+        <h2 className="text-2xl text-blue-500 mb-5">
+          Computer Science Student
+        </h2>
 
 
 
-<p
-className={
-darkMode
-?
-"max-w-xl text-gray-300"
-:
-"max-w-xl text-gray-700"
-}
->
+        <p
+          className={
+            darkMode
+              ?
+              "max-w-xl text-gray-300"
+              :
+              "max-w-xl text-gray-700"
+          }
+        >
 
-Backend developer interested in ERP systems,
-enterprise software and database-driven applications.
+          Backend developer interested in ERP systems,
+          enterprise software and database-driven applications.
 
-</p>
+        </p>
 
 
 
-<div className="mt-8">
+        <div className="mt-8">
 
 
-<a
-className="bg-blue-600 text-white px-6 py-3 rounded-lg mr-4"
-href="https://github.com/BL4GGYL"
-target="_blank"
->
+          <a
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg mr-4"
+            href="https://github.com/BL4GGYL"
+            target="_blank"
+          >
 
-Github
+            Github
 
-</a>
+          </a>
 
 
 
-<a
-className="border border-blue-500 px-6 py-3 rounded-lg"
-href="#contact"
->
+          <a
+            className="border border-blue-500 px-6 py-3 rounded-lg"
+            href="#contact"
+          >
 
-Contact
+            Contact
 
-</a>
+          </a>
 
 
-</div>
+        </div>
 
 
-</section>
+      </section>
 
 
 
 
 
 
-{/* About */}
+      {/* About */}
 
-<section
-id="about"
-className="py-20 px-10"
->
+      <section
+        id="about"
+        className="py-20 px-10"
+      >
 
-<h2 className="text-3xl font-bold mb-8">
-About Me
-</h2>
+        <h2 className="text-3xl font-bold mb-8">
+          About Me
+        </h2>
 
 
-<div className="max-w-4xl">
+        <div className="max-w-4xl">
 
 
-<p
-className={
-darkMode
-?
-"text-gray-300 text-lg leading-relaxed"
-:
-"text-gray-700 text-lg leading-relaxed"
-}
->
+          <p
+            className={
+              darkMode
+                ?
+                "text-gray-300 text-lg leading-relaxed"
+                :
+                "text-gray-700 text-lg leading-relaxed"
+            }
+          >
 
-I am a fifth-year Computer Science student at the{" "} 
-<strong className="text-blue-500">
-University of Computer Studies Mandalay{" "}
-</strong>
-with a strong interest in{" "} 
-<strong className="text-blue-500">
-  backend development, enterprise software, and ERP systems.
-</strong>
+            I am a fifth-year Computer Science student at the{" "}
+            <strong className="text-blue-500">
+              University of Computer Studies Mandalay{" "}
+            </strong>
+            with a strong interest in{" "}
+            <strong className="text-blue-500">
+              backend development, enterprise software, and ERP systems.
+            </strong>
 
-</p>
+          </p>
 
 
-<div className="grid md:grid-cols-3 gap-5 mt-8">
+          <div className="grid md:grid-cols-3 gap-5 mt-8">
 
 
-<div
-className={
-darkMode
-?
-"bg-gray-900 p-5 rounded-xl"
-:
-"bg-white p-5 rounded-xl shadow"
-}
->
+            <div
+              className={
+                darkMode
+                  ?
+                  "bg-gray-900 p-5 rounded-xl"
+                  :
+                  "bg-white p-5 rounded-xl shadow"
+              }
+            >
 
-<h3 className="font-bold text-blue-500 mb-2">
-💻 Development
-</h3>
+              <h3 className="font-bold text-blue-500 mb-2">
+                💻 Development
+              </h3>
 
-<p>
-Building database-driven applications and management systems.
-</p>
+              <p>
+                Building database-driven applications and management systems.
+              </p>
 
-</div>
+            </div>
 
 
 
 
-<div
-className={
-darkMode
-?
-"bg-gray-900 p-5 rounded-xl"
-:
-"bg-white p-5 rounded-xl shadow"
-}
->
+            <div
+              className={
+                darkMode
+                  ?
+                  "bg-gray-900 p-5 rounded-xl"
+                  :
+                  "bg-white p-5 rounded-xl shadow"
+              }
+            >
 
-<h3 className="font-bold text-blue-500 mb-2">
-⚙️ Experience
-</h3>
+              <h3 className="font-bold text-blue-500 mb-2">
+                ⚙️ Experience
+              </h3>
 
-<p>
-Worked with C#, Java Spring Boot, PHP, SQL Server and MySQL.
-</p>
+              <p>
+                Worked with C#, Java Spring Boot, PHP, SQL Server and MySQL.
+              </p>
 
-</div>
+            </div>
 
 
 
 
-<div
-className={
-darkMode
-?
-"bg-gray-900 p-5 rounded-xl"
-:
-"bg-white p-5 rounded-xl shadow"
-}
->
+            <div
+              className={
+                darkMode
+                  ?
+                  "bg-gray-900 p-5 rounded-xl"
+                  :
+                  "bg-white p-5 rounded-xl shadow"
+              }
+            >
 
-<h3 className="font-bold text-blue-500 mb-2">
-🚀 Goal
-</h3>
+              <h3 className="font-bold text-blue-500 mb-2">
+                🚀 Goal
+              </h3>
 
-<p>
-Seeking opportunities to grow as a Software Engineer.
-</p>
+              <p>
+                Seeking opportunities to grow as a Software Engineer.
+              </p>
 
-</div>
+            </div>
 
 
-</div>
+          </div>
 
 
 
-</div>
+        </div>
 
 
-</section>
+      </section>
 
 
 
 
+      {/* Skills */}
 
+      <section
+        id="skills"
+        className={
+          darkMode
+            ?
+            "py-20 px-10 bg-gray-900"
+            :
+            "py-20 px-10 bg-gray-200"
+        }
+      >
 
-{/* Skills */}
+        <h2 className="text-3xl font-bold mb-8">
+          Technical Skills
+        </h2>
 
 
-<section
-id="skills"
-className={
-darkMode
-?
-"py-20 px-10 bg-gray-900"
-:
-"py-20 px-10 bg-gray-200"
-}
->
+        <div className="grid md:grid-cols-3 gap-6">
 
 
-<h2 className="text-3xl font-bold mb-8">
-Technical Skills
-</h2>
+          {
+            [
+              {
+                title: "Programming Languages",
+                skills: [
+                  "C#",
+                  "Java",
+                  "PHP",
+                  "Python",
+                  "JavaScript"
+                ]
+              },
 
+              {
+                title: "Backend Development",
+                skills: [
+                  "Spring Boot",
+                  "REST API",
+                  "ADO.NET",
+                  "OOP"
+                ]
+              },
 
+              {
+                title: "Database",
+                skills: [
+                  "SQL Server",
+                  "MySQL",
+                  "PostgreSQL",
+                  "Database Design"
+                ]
+              },
 
-<div className="grid md:grid-cols-3 gap-5">
+              {
+                title: "Frontend",
+                skills: [
+                  "HTML",
+                  "CSS",
+                  "Tailwind CSS",
+                  "Basic React"
+                ]
+              },
 
+              {
+                title: "Tools",
+                skills: [
+                  "Visual Studio",
+                  "Eclipse",
+                  "XAMPP",
+                  "Docker",
+                  "Git/GitHub"
+                ]
+              },
 
-{
+              {
+                title: "Other Knowledge",
+                skills: [
+                  "Linux",
+                  "Networking",
+                  "Virtualization"
+                ]
+              }
 
-[
-"C#",
-"Java",
-"PHP",
-"Python",
-"Spring Boot",
-"SQL Server",
-"MySQL",
-"PostgreSQL",
-"HTML/CSS",
-"JavaScript",
-"Docker",
-"Linux"
+            ].map(category => (
 
-].map(skill=>(
 
+              <div
+                key={category.title}
+                className={
+                  darkMode
+                    ?
+                    "bg-gray-800 p-6 rounded-xl"
+                    :
+                    "bg-white p-6 rounded-xl shadow"
+                }
+              >
 
-<div
-key={skill}
-className={
-darkMode
-?
-"bg-gray-800 p-5 rounded-lg text-center"
-:
-"bg-white p-5 rounded-lg text-center shadow"
-}
->
 
-{skill}
+                <h3 className="text-blue-500 font-bold text-lg mb-4">
 
-</div>
+                  {category.title}
 
+                </h3>
 
-))
 
-}
+                <div className="flex flex-wrap gap-2">
 
 
-</div>
+                  {
+                    category.skills.map(skill => (
 
+                      <span
+                        key={skill}
+                        className={
+                          darkMode
+                            ?
+                            "bg-gray-700 px-3 py-1 rounded-full text-sm"
+                            :
+                            "bg-gray-200 px-3 py-1 rounded-full text-sm"
+                        }
+                      >
 
-</section>
+                        {skill}
 
+                      </span>
 
+                    ))
+                  }
 
 
+                </div>
 
 
+              </div>
 
 
+            ))
 
-{/* Projects */}
+          }
 
 
-<section
-id="projects"
-className="py-20 px-10"
->
+        </div>
 
 
-<h2 className="text-3xl font-bold mb-8">
-Projects
-</h2>
+      </section>
 
 
 
-<div className="grid md:grid-cols-3 gap-6">
 
 
-{
 
-projects.map(project=>(
+      {/* Projects */}
 
 
-<div
-key={project.title}
-className={
-darkMode
-?
-"bg-gray-900 p-6 rounded-xl"
-:
-"bg-white p-6 rounded-xl shadow"
-}
->
+      <section
+        id="projects"
+        className="py-20 px-10"
+      >
 
 
-<h3 className="text-xl font-bold mb-3">
+        <h2 className="text-3xl font-bold mb-8">
+          Projects
+        </h2>
 
-{project.title}
 
-</h3>
 
+        <div className="grid md:grid-cols-3 gap-6">
 
 
-<p className="text-blue-500 mb-3">
+          {
 
-{project.tech}
+            projects.map(project => (
 
-</p>
 
+              <div
+                key={project.title}
+                className={
+                  darkMode
+                    ?
+                    "bg-gray-900 p-6 rounded-xl"
+                    :
+                    "bg-white p-6 rounded-xl shadow"
+                }
+              >
 
 
-<p
-className={
-darkMode
-?
-"text-gray-300"
-:
-"text-gray-700"
-}
->
+                <h3 className="text-xl font-bold mb-3">
 
-{project.description}
+                  {project.title}
 
-</p>
+                </h3>
 
 
 
-</div>
+                <p className="text-blue-500 mb-3">
 
+                  {project.tech}
 
-))
+                </p>
 
 
-}
 
+                <p
+                  className={
+                    darkMode
+                      ?
+                      "text-gray-300"
+                      :
+                      "text-gray-700"
+                  }
+                >
 
-</div>
+                  {project.description}
 
+                </p>
 
-</section>
 
 
+              </div>
 
 
+            ))
 
 
+          }
 
 
+        </div>
 
-{/* Certificates */}
 
+      </section>
 
 
-<section
-className={
-darkMode
-?
-"py-20 px-10 bg-gray-900"
-:
-"py-20 px-10 bg-gray-200"
-}
->
 
 
-<h2 className="text-3xl font-bold mb-8">
 
-Certificates & Achievements
 
-</h2>
 
 
 
+      {/* Certificates */}
 
-<div className="grid md:grid-cols-2 gap-8">
 
 
+      <section
+        className={
+          darkMode
+            ?
+            "py-20 px-10 bg-gray-900"
+            :
+            "py-20 px-10 bg-gray-200"
+        }
+      >
 
-<div
-className={
-darkMode
-?
-"bg-gray-800 rounded-xl p-6"
-:
-"bg-white rounded-xl p-6 shadow"
-}
->
 
+        <h2 className="text-3xl font-bold mb-8">
 
-<h3 className="text-xl font-bold mb-3">
+          Certificates & Achievements
 
-🏆 Myanmar Cyber Security Challenge 2025
+        </h2>
 
-</h3>
 
 
 
-<p className="mb-5">
+        <div className="grid md:grid-cols-2 gap-8">
 
-Achieved 17th place in the Open Level,
-demonstrating cybersecurity knowledge,
-analytical thinking and problem-solving skills.
 
-</p>
 
+          <div
+            className={
+              darkMode
+                ?
+                "bg-gray-800 rounded-xl p-6"
+                :
+                "bg-white rounded-xl p-6 shadow"
+            }
+          >
 
 
-<a
-href="/CTF.jpg"
-target="_blank"
-rel="noopener noreferrer"
-className="bg-blue-600 text-white px-5 py-2 rounded-lg"
->
+            <h3 className="text-xl font-bold mb-3">
 
-View Certificate
+              🏆 Myanmar Cyber Security Challenge 2025
 
-</a>
+            </h3>
 
 
-</div>
 
+            <p className="mb-5">
 
+              Achieved 17th place in the Open Level,
+              demonstrating cybersecurity knowledge,
+              analytical thinking and problem-solving skills.
 
+            </p>
 
 
 
-<div
-className={
-darkMode
-?
-"bg-gray-800 rounded-xl p-6"
-:
-"bg-white rounded-xl p-6 shadow"
-}
->
+            <a
+              href="/CTF.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-5 py-2 rounded-lg"
+            >
 
+              View Certificate
 
-<h3 className="text-xl font-bold mb-3">
+            </a>
 
-🚗 Arduino Bluetooth Car Competition
 
-</h3>
+          </div>
 
 
 
-<p className="mb-5">
 
-Received a Consolation Prize for developing
-an Arduino-based Bluetooth-controlled car project.
 
-</p>
 
+          <div
+            className={
+              darkMode
+                ?
+                "bg-gray-800 rounded-xl p-6"
+                :
+                "bg-white rounded-xl p-6 shadow"
+            }
+          >
 
 
-<a
-href="/1stYear.jpg"
-target="_blank"
-rel="noopener noreferrer"
-className="bg-blue-600 text-white px-5 py-2 rounded-lg"
->
+            <h3 className="text-xl font-bold mb-3">
 
-View Certificate
+              🚗 Arduino Bluetooth Car Competition
 
-</a>
+            </h3>
 
 
-</div>
 
+            <p className="mb-5">
 
+              Received a Consolation Prize for developing
+              an Arduino-based Bluetooth-controlled car project.
 
-</div>
+            </p>
 
 
-</section>
 
+            <a
+              href="/1stYear.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-5 py-2 rounded-lg"
+            >
 
+              View Certificate
 
+            </a>
 
 
+          </div>
 
 
 
-{/* Contact */}
+        </div>
 
 
-<section
-id="contact"
-className="py-20 px-10"
->
+      </section>
 
 
-<h2 className="text-3xl font-bold mb-5">
 
-Contact
 
-</h2>
 
 
-<p>
-📧 kaungkhantlin04@gmail.com
-</p>
 
 
-<p>
-📞 +959 977788873
-</p>
+      {/* Contact */}
 
 
-<p>
-Github: github.com/BL4GGYL
-</p>
+      <section
+        id="contact"
+        className="py-20 px-10"
+      >
 
 
+        <h2 className="text-3xl font-bold mb-5">
 
-</section>
+          Contact
 
+        </h2>
 
 
-</div>
+        <p>
+          📧 kaungkhantlin04@gmail.com
+        </p>
+
+
+        <p>
+          📞 +959 977788873
+        </p>
+
+
+        <p>
+          Github: github.com/BL4GGYL
+        </p>
+
+
+
+      </section>
+
+
+
+    </div>
 
 
   )
