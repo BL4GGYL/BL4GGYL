@@ -76,12 +76,23 @@ function App() {
           </h1>
 
 
-          <button
-            className="md:hidden text-2xl"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            ☰
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+
+            <button
+              onClick={toggleTheme}
+              className="text-xl"
+            >
+              {darkMode ?   "🌙" :"☀️"}
+            </button>
+
+            <button
+              className="text-2xl"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              ☰
+            </button>
+
+          </div>
 
 
 
@@ -100,9 +111,10 @@ function App() {
               {
                 darkMode
                   ?
+                  
+                  
+                  "🌙":
                   "☀️"
-                  :
-                  "🌙"
               }
             </button>
 
@@ -134,18 +146,7 @@ function App() {
             </a>
 
 
-            <button
-              onClick={toggleTheme}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg"
-            >
-              {
-                darkMode
-                  ?
-                  "☀️ Light"
-                  :
-                  "🌙 Dark"
-              }
-            </button>
+     
 
 
           </div>
@@ -169,9 +170,8 @@ function App() {
         <img
           src="/profile.jpg"
           alt="Kaung Khant Lin"
-          className="w-40 h-40 rounded-full object-cover mb-6 border-4 border-blue-500"
+          className="w-40 h-40 rounded-full object-cover mb-6 border-4 border-indigo-500"
         />
-
 
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
@@ -180,7 +180,7 @@ function App() {
 
 
 
-        <h2 className="text-2xl text-blue-500 mb-5">
+        <h2 className="text-2xl text-indigo-500 mb-5">
           Computer Science Student
         </h2>
 
@@ -207,7 +207,7 @@ function App() {
 
 
           <a
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg mr-4"
+            className="bg-indigo-600 text-white px-6 py-3 rounded-lg mr-4"
             href="https://github.com/BL4GGYL"
             target="_blank"
           >
@@ -264,11 +264,11 @@ function App() {
           >
 
             I am a fifth-year Computer Science student at the{" "}
-            <strong className="text-blue-500">
+            <strong className="text-indigo-500">
               University of Computer Studies Mandalay{" "}
             </strong>
             with a strong interest in{" "}
-            <strong className="text-blue-500">
+            <strong className="text-indigo-500">
               backend development, enterprise software, and ERP systems.
             </strong>
 
@@ -288,7 +288,7 @@ function App() {
               }
             >
 
-              <h3 className="font-bold text-blue-500 mb-2">
+              <h3 className="font-bold text-indigo-500 mb-2">
                 💻 Development
               </h3>
 
@@ -311,7 +311,7 @@ function App() {
               }
             >
 
-              <h3 className="font-bold text-blue-500 mb-2">
+              <h3 className="font-bold text-indigo-500 mb-2">
                 ⚙️ Experience
               </h3>
 
@@ -334,7 +334,7 @@ function App() {
               }
             >
 
-              <h3 className="font-bold text-blue-500 mb-2">
+              <h3 className="font-bold text-indigo-500 mb-2">
                 🚀 Goal
               </h3>
 
@@ -456,7 +456,7 @@ function App() {
               >
 
 
-                <h3 className="text-blue-500 font-bold text-lg mb-4">
+                <h3 className="text-indigo-500 font-bold text-lg mb-4">
 
                   {category.title}
 
@@ -659,7 +659,7 @@ function App() {
               href="/CTF.jpg"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-5 py-2 rounded-lg"
+              className="bg-indigo-600 text-white px-5 py-2 rounded-lg"
             >
 
               View Certificate
@@ -706,7 +706,7 @@ function App() {
               href="/1stYear.jpg"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-5 py-2 rounded-lg"
+              className="bg-indigo-600 text-white px-5 py-2 rounded-lg"
             >
 
               View Certificate
@@ -740,25 +740,18 @@ function App() {
 
           <a
             href="mailto:kaungkhantlin04@gmail.com"
-            className="flex items-center gap-3 hover:text-blue-500 transition"
+            className="flex items-center gap-3 hover:text-indigo-500 transition"
           >
             <FaEnvelope />
             <span>kaungkhantlin04@gmail.com</span>
           </a>
 
-          <a
-            href="tel:+959977788873"
-            className="flex items-center gap-3 hover:text-blue-500 transition"
-          >
-            <FaPhone />
-            <span>+95 9977788873</span>
-          </a>
 
           <a
             href="https://github.com/BL4GGYL"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 hover:text-blue-500 transition"
+            className="flex items-center gap-3 hover:text-indigo-500 transition"
           >
             <FaGithub />
             <span>github.com/BL4GGYL</span>
@@ -767,7 +760,7 @@ function App() {
           <a
             href="/KaungKhant_Resume.pdf"
             download
-            className="inline-flex items-center gap-3 bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700 transition mt-4"
+            className="inline-flex items-center gap-3 bg-indigo-600 text-white px-5 py-3 rounded-lg hover:bg-indigo-700 transition mt-4"
           >
             <FaFileDownload />
             Download CV
