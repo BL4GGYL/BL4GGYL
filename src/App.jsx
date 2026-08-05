@@ -4,7 +4,7 @@ import { FaGithub, FaEnvelope, FaPhone, FaFileDownload } from "react-icons/fa";
 function App() {
 
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") !== "light"
+    localStorage.getItem("theme") === "dark"
   );
 
   const [menuOpen, setMenuOpen] = useState(false);
