@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaGithub, FaEnvelope, FaPhone, FaFileDownload } from "react-icons/fa";
 
 function App() {
 
@@ -727,43 +728,54 @@ function App() {
 
 
 
-
-
       {/* Contact */}
 
+      <section id="contact" className="py-20 px-10">
 
-      <section
-        id="contact"
-        className="py-20 px-10"
-      >
-
-
-        <h2 className="text-3xl font-bold mb-5">
-
+        <h2 className="text-3xl font-bold mb-8">
           Contact
-
         </h2>
 
+        <div className="space-y-5 text-lg">
 
-        <p>
-          📧 kaungkhantlin04@gmail.com
-        </p>
+          <a
+            href="mailto:kaungkhantlin04@gmail.com"
+            className="flex items-center gap-3 hover:text-blue-500 transition"
+          >
+            <FaEnvelope />
+            <span>kaungkhantlin04@gmail.com</span>
+          </a>
 
+          <a
+            href="tel:+959977788873"
+            className="flex items-center gap-3 hover:text-blue-500 transition"
+          >
+            <FaPhone />
+            <span>+95 9977788873</span>
+          </a>
 
-        <p>
-          📞 +959 977788873
-        </p>
+          <a
+            href="https://github.com/BL4GGYL"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 hover:text-blue-500 transition"
+          >
+            <FaGithub />
+            <span>github.com/BL4GGYL</span>
+          </a>
 
+          <a
+            href="/KaungKhant_Resume.pdf"
+            download
+            className="inline-flex items-center gap-3 bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700 transition mt-4"
+          >
+            <FaFileDownload />
+            Download CV
+          </a>
 
-        <p>
-          Github: github.com/BL4GGYL
-        </p>
-
-
+        </div>
 
       </section>
-
-
 
     </div>
 
