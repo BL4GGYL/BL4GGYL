@@ -219,7 +219,7 @@ function App() {
 
 
           <a
-            className="border border-blue-500 px-6 py-3 rounded-lg"
+            className="border border-indigo-500 px-6 py-3 rounded-lg"
             href="#contact"
           >
 
@@ -552,7 +552,7 @@ function App() {
 
 
 
-                <p className="text-blue-500 mb-3">
+                <p className="text-indigo-500 mb-3">
 
                   {project.tech}
 
