@@ -19,30 +19,34 @@ function App() {
     );
   };
 
-
   const projects = [
     {
       title: "Bank Management System",
       tech: "C# | Windows Forms | SQL Server",
       description:
-        "Desktop banking application with customer management, account transactions, deposits, withdrawals, transfers and transaction history."
+        "Desktop banking application with customer management, account transactions, deposits, withdrawals, transfers and transaction history.",
+      github:
+        "https://github.com/BL4GGYL/Bank-Management-System"
     },
 
     {
       title: "Carbon Credit Trading Management System",
       tech: "Java | Spring Boot | SQL Server | Tailwind CSS",
       description:
-        "Role-based web system for managing carbon credit trading activities between government administrators, trade administrators and companies."
+        "Role-based web system for managing carbon credit trading activities between government administrators, trade administrators and companies.",
+      github:
+        "https://github.com/BL4GGYL/Carbon-Credit-Trading-Management-System"
     },
 
     {
       title: "Employee Attendance Management System",
       tech: "PHP | MySQL | HTML | CSS | JavaScript",
       description:
-        "Web attendance system with authentication, database management and location-based attendance features."
+        "Web attendance system with authentication, database management and location-based attendance features.",
+      github:
+        "https://github.com/BL4GGYL/Employee-Attendance-Management-System"
     }
   ];
-
 
 
   return (
@@ -82,7 +86,7 @@ function App() {
               onClick={toggleTheme}
               className="text-xl"
             >
-              {darkMode ?   "🌙" :"☀️"}
+              {darkMode ? "🌙" : "☀️"}
             </button>
 
             <button
@@ -111,9 +115,9 @@ function App() {
               {
                 darkMode
                   ?
-                  
-                  
-                  "🌙":
+
+
+                  "🌙" :
                   "☀️"
               }
             </button>
@@ -146,7 +150,7 @@ function App() {
             </a>
 
 
-     
+
 
 
           </div>
@@ -573,6 +577,16 @@ function App() {
                   {project.description}
 
                 </p>
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-5 text-indigo-500"
+                >
+                  <FaGithub />
+                  View Source Code
+                </a>
 
 
 
